@@ -1,0 +1,195 @@
+<!--<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Student Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo1">
+  			<img src="images/BMS_logo.png" width="90px" height="90px">
+  			<h3 style="color: white;">ONLINE LIBRARY MANAGEMENT SYSTEM</h3>
+  		</div>
+  			<nav>
+  				<ul>
+  					<li><a href="index.html">HOME</a></li>
+  					<li><a href="books.html">BOOKS</a></li>
+  					<li><a href="student_login.html">STUDENT-LOGIN</a></li>
+  					<li><a href="admin_login.html">ADMIN-LOGIN</a></li>
+  					<li><a href="feedback.php">FEEDBACK</a></li>
+  				</ul>
+  			</nav>
+    </header>-->
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+
+      <title>Student Registration</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+      <style type="text/css">
+        section
+        {
+          margin-top: -20px;
+        }
+      </style>
+      <script type="text/javascript" src="index1.js"></script>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-inverse" style="height: 150px;" >
+          <div class="container-fluid">
+
+
+              <ul class="nav navbar-nav">
+                <li ><a href="index.html">HOME</a></li>
+                <li><a href="books.html">BOOKS</a></li>
+                <li><a href="feedback.html">FEEDBACK</a></li>
+              </ul>
+              <a class="navbar-brand"style="padding-left:380px;" href="#">
+                <img src="images/BMS_logo.png" alt="logo" style="width:110px;">
+              </a>
+
+              <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="student_login.html"><span class="glyphicon glyphicon-log-in"> LOGIN</span></a></li>
+                <li><a href="student_login.html"><span class="glyphicon glyphicon-log-out"> LOGOUT</span></a></li>
+                <li><a href="registration.html"><span class="glyphicon glyphicon-user"> SIGN UP</span></a></li>
+              </ul>
+
+          </div>
+        </nav>
+    <section>
+      <div class="reg_img">
+        <br><br><br>
+  			<div class="boxregistration">
+  				<h1 style="text-align: center; font-size: 35px;">LIBRARY MANAGEMENT SYSTEM</h1>
+  				<h1 style="text-align: center;font-size: 25px;">User sign up Form</h1>
+          <form class="login" action="new_register1.html" method="" onsubmit="return validation()">
+          <br>
+            <div class="logindetials">
+              <input class="form-group" type="text" name="first" placeholder="First Name" id="firstname"><br>
+              <span id="firstname1" class="text-danger" style="font-weight: bold;"></span>
+              <br><br>
+              <input class="form-group"type="text" name="last" placeholder="Last Name" id="lastname"><br>
+              <span id="lastname1" class="text-danger" style="font-weight: bold;"></span>
+              <br><br>
+              <input class="form-group"type="text" name="email" placeholder="Email" id="email"><br>
+              <span id="email1" class="text-danger" style="font-weight: bold;"></span>
+              <br><br>
+              <input class="form-group"type="text" name="rollno" placeholder="USN" id=rollno><br>
+              <span id="rollno1" class="text-danger" style="font-weight: bold;"></span>
+              <br><br>
+              <input class="form-group"type="text" name="username" placeholder="username" id=username><br>
+              <span id="username1" class="text-danger" style="font-weight: bold;"></span>
+              <br><br>
+              <input class="form-group"type="password" name="password" placeholder="password" id=password><br>
+              <span id="password1" class="text-danger" style="font-weight: bold;"></span>
+              <br><br>
+              <input type="submit" name="submit" value="submit" class="btn" onclick="handleSubmit1()"/>
+            </div>
+          </form>
+          <div class="logindetials1">
+            <p>
+              <a href="student_login.html" style="color:white;">Already Registered? Sign in</a>
+            </p>
+          </div>
+  			</div>
+      </div>
+    </section>
+    <script type="text/javascript">
+
+      function validation(){
+        var first=document.getElementById('firstname').value;
+        var last=document.getElementById('lastname').value;
+        var mail=document.getElementById('email').value;
+        var roll=document.getElementById('rollno').value;
+        var user=document.getElementById('username').value;
+        var pass=document.getElementById('password').value;
+
+        if(first==""){
+          document.getElementById('firstname1').innerHTML="**please enter the firstname";
+          return false;
+
+        }
+        else{
+          document.getElementById('firstname1').innerHTML="";
+        }
+        if(last==""){
+          document.getElementById('lastname1').innerHTML="**please enter the lastname";
+          return false;
+        }
+        else {
+          document.getElementById('lastname1').innerHTML="";
+        }
+        if(mail==""){
+          document.getElementById('email1').innerHTML="**please enter the email";
+          return false;
+        }
+        else if(mail[0]=='@'){
+          document.getElementById('email1').innerHTML="**@ invalid position";
+          return false;
+        }
+        else if((mail.charAt(mail.length-4)!='.')&&(mail.charAt(mail.length-3)!='.')){
+          document.getElementById('email1').innerHTML="**. invalid position";
+          return false;
+        }
+        else {
+          document.getElementById('email1').innerHTML="";
+        }
+        if(roll==""){
+          document.getElementById('rollno1').innerHTML="**please enter the usn";
+          return false;
+        }
+        else if(roll[0]!='1'||roll[1]!='B'||roll[2]!='M'){
+          document.getElementById('rollno1').innerHTML="**enter the correct usn";
+          return false;
+        }
+        else {
+          document.getElementById('rollno1').innerHTML="";
+        }
+        if(user==""){
+          document.getElementById('username1').innerHTML="**please enter the username";
+          return false;
+        }
+        else if(user.length<2 || user.length>20){
+          document.getElementById('username1').innerHTML="**username must be between 2 and 20 characters";
+          return false;
+        }
+        else {
+          document.getElementById('username1').innerHTML="";
+        }
+        if(pass==""){
+          document.getElementById('password1').innerHTML="**please enter the password";
+          return false;
+        }
+         else if(pass.length<5 || pass.length>20){
+          document.getElementById('password1').innerHTML="**password must be between 5 and 10 characters";
+          return false;
+        }
+        else {
+          document.getElementById('password1').innerHTML="";
+        }
+      }
+    </script>
+  </body>
+</html>

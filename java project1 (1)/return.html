@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Online Library Management System
+	</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<style >
+nav{
+	float: right;
+	word-spacing: 30px;
+	padding: 40px;
+}
+
+nav li{
+	display: inline-block;
+	line-height: 70px;
+}
+</style>
+
+
+<body>
+
+    <div class="wrapper3">
+
+
+		<header>
+		<div class="logo">
+			<br>
+      <br>
+			<h3 style="color: white; margin-left : 620px;">ISSUED BOOKS</h3>
+		</div>
+
+		</header>
+		<section>
+      <br>
+      <br>
+      <div class="book_image">
+        <a href="book5.html">
+        <img class="book_imageleft" src="images/book5.jpg" width="200px" height="300px">
+        </a>
+        <div class="book_disleft">
+          <h1>Code: The Hidden Language of Computer Hardware and Softwar</h1>
+          <button type="button" name="ISSUE" onclick="check10()" style="width:100px; height:60px;font-size:1.5em;background: tomato;">RETURN</button>
+        </div>
+
+      </div>
+
+			<br>
+			<div class="book_image">
+				<a href="book4.html">
+				<img class="book_imageright" src="images/book4.jpg" width="200px" height="300px">
+				</a>
+				<div class="book_disright">
+					<h1>Hackers: Heroes of the Computer Revolution</h1>
+					<button type="button" name="ISSUE" onclick="check10()" style="width:100px; height:60px;font-size:1.5em;background: tomato;">RETURN</button>
+				</div>
+
+			</div>
+			<br>
+      <br>
+			<br>
+      <br>
+			<footer>
+				<p style="color:white;  text-align: center; ">
+					<br><br>
+					Email: Online.library@gmail.com <br>
+					Mobile: +88018********
+				</p>
+			</footer>
+		</section>
+
+
+    </div>
+    <script>
+			function check10(){
+				alert("Your Return Request has been registered, please return it to library");
+        window.open("booklogin.html","_self");
+			}
+		</script>
+</body>
+
+</html>
